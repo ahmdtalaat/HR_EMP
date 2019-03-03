@@ -8,6 +8,9 @@ admin.site.unregister(Group)
 class EmpAttendance(admin.ModelAdmin):
     list_display = ['employee', 'day', 'status', 'working_hours']
 
+    def get_ordering(self, request):
+        return [('-day')]
+
 
 class Emp(admin.ModelAdmin):
     list_display = ['name', 'email', 'mobil', 'hireDate']
