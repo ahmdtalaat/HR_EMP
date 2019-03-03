@@ -1,3 +1,3 @@
 # HR Employee System
 
-## Employee management system by HR_EMPs
+## Employee management system for HR_EMPs
