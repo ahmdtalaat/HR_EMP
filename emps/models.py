@@ -26,7 +26,7 @@ class MinMaxHours(models.FloatField):  # working hours validator (from stackover
 
 class Attendance(models.Model):
     day = models.DateField(default=datetime.date.today)
-    working_hours = MinMaxHours(min_value=0.0, max_value=8.0)
+    working_hours = MinMaxHours(default=0, min_value=0.0, max_value=8.0)
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
     STATUS_CHOICES = (
         ('PRESENT', 'Present'),
