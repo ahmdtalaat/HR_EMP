@@ -6,7 +6,7 @@
 	"python.linting.pep8Enabled": false,
 	"python.linting.pylamaEnabled": false,
 	"editor.formatOnSave": true,
-	"python.linting.flake8Args": ["--max-line-length=130", "--ignore=F401"],
+	"python.linting.flake8Args": ["--max-line-length=130", "--ignore=F401,F841"],
 	"python.linting.pylintArgs": [
 		"--load-plugins=pylint_django",
 		"--disable=C0111,W0611"
