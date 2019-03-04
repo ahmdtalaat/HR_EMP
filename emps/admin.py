@@ -8,6 +8,7 @@ admin.site.unregister(Group)  # remove Group from admin page
 # Modify how the Attendance page will look like
 class EmpAttendance(admin.ModelAdmin):
     list_display = ['employee', 'day', 'status', 'working_hours']
+    search_fields = ['employee__name__icontains']
 
     def get_ordering(self, request):
         return [('-day')]
