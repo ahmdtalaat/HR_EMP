@@ -9,6 +9,8 @@
 </head>
 <body>
     <button><a href="{% url 'home' %}">Home</a></button>
+    <button><a href="{% url 'about' %}">Emp of the month</a></button>
+
     <h2>Calculate Employee's working hours</h2>
     <form method="get">{% csrf_token %}
         {{form|crispy}}
@@ -25,7 +27,7 @@
             {% if totalworkinghours %}
 
                 <pre>
-                    <strong>Name: {{empname}}      from:{{start}}   to:{{end}}   total working hours: {{totalworkinghours}}</strong>
+                    <b>Name</b>: {{empname}}      <b>From</b>:{{start}}   <b>To</b>:{{end}}   <b>Total working hours</b>: {{totalworkinghours}}
                 </pre>
 
             {% endif %}
