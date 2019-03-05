@@ -5,7 +5,7 @@ from emps.models import Attendance, Employee
 from django.db.models import Avg
 
 
-def home(request):
+def home(request):  # Employee Report View
     form = AttendanceForm(request.GET)
     empname = request.GET.get('employee')
     startdate = request.GET.get('start_date')
@@ -35,7 +35,7 @@ def home(request):
     return render(request, "emps/home.html", context)
 
 
-def empofthemonth(request):
+def empofthemonth(request):  # Employee of the month View
     form = EmployeeForm(request.GET)
     year = request.GET.get('year')
     month = request.GET.get('month')
